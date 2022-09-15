@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valley Movies</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <section id="landing">
+      <nav>
+        <div class="nav__container">
+          <figure class="logo__wrapper">
+            <a href="#"><img src="./assets/logo.png" alt="" class="logo click" /></a>
+          </figure>
+          <ul>
+            <li class="nav__link"><a href="#">Home</a></li>
+            <li class="nav__link"><a href="">Find your movie</a></li>
+            <li class="nav__link--btn click">
+              <a href=""><span class="btn">Contact</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <h1>Browse our <span class="red">movies</span></h1>
+          <input
+            type="text"
+            placeholder="Search by title, year, or keyword"
+            class="nav__search-bar"
+            onchange="searchBarInput(event)"
+          />
+          <button class="nav__btn click">Search</button>
+        </div>
+      </nav>
+    </section>
+    <main>
+      <div class="row">
+        <div class="container">
+          <div class="search__df">
+            <h3 class="search__results">
+              Search results:<span class="red"></span>
+            </h3>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="LOW_TO_HIGH">Release Date</option>
+              <option value="META_RATING">Metascore</option>
+              <option value="IMDB_RATING">IMDB Rating</option>
+            </select>
+          </div>
+          <div class="movies">
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="row footer__row">
+        <div class="container">
+          <figure class="footer__img--wrapper">
+            <img src="./assets/logo.png" alt="" class="footer__logo" />
+            <h3 class="footer__title">Valley Movies</h3>
+          </figure>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Home</a></li>
+            <li><a href="#" class="footer__link">Find your movie</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
